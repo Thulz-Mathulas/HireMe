@@ -3,158 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HireMe - Find Jobs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Header and Navbar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-container img {
-            height: 70px; /* Enlarged logo */
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            position: relative;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            padding: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #007BFF;
-        }
-
-        /* Dropdown Menu */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 35px;
-            left: 0;
-            background-color: #fff;
-            min-width: 180px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            border-radius: 5px;
-            overflow: hidden;
-            z-index: 10;
-        }
-
-        .dropdown-content a {
-            display: block;
-            padding: 0.7rem 1rem;
-            color: #333;
-            font-weight: normal;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f0f0;
-            color: #007BFF;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 6rem 2rem;
-            background-color: #e9f2ff;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero button {
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .hero button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Features Section */
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 4rem 2rem;
-            text-align: center;
-            flex-wrap: wrap;
-        }
-
-        .feature-item {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            max-width: 300px;
-            flex: 1 1 250px;
-        }
-
-        .feature-item h3 {
-            margin-bottom: 1rem;
-            color: #007BFF;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #333;
-            color: #fff;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>HireMe - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="HireMe Logo">
+            <img src="logo.png" alt="HireMe Logo" class="logo">
         </div>
         <nav>
             <ul>
@@ -163,10 +18,10 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown">
-                    <a href="#">Register ▼</a>
+                    <a href="#" class="dropbtn">Login</a>
                     <div class="dropdown-content">
-                        <a href="candidate-register.html">Candidate</a>
-                        <a href="recruiter-register.html">Recruiter</a>
+                        <a href="login.html?type=candidate">Candidate Login</a>
+                        <a href="login.html?type=recruiter">Recruiter Login</a>
                     </div>
                 </li>
             </ul>
@@ -176,22 +31,17 @@
     <main>
         <section class="hero">
             <h1>Welcome to HireMe</h1>
-            <p>Your one-stop platform to find jobs and connect with top recruiters!</p>
-            <button onclick="window.location.href='jobs.html'">Browse Jobs</button>
+            <p>Your one-stop platform to connect candidates with recruiters!</p>
         </section>
 
         <section class="features">
             <div class="feature-item">
-                <h3>Upload Your CV</h3>
-                <p>Candidates can register and upload their CVs to get noticed by recruiters quickly.</p>
+                <h3>Register & Build Your Profile</h3>
+                <p>Candidates can register, upload their CV, and be discovered by recruiters.</p>
             </div>
             <div class="feature-item">
-                <h3>Post Job Openings</h3>
-                <p>Recruiters can register and post job vacancies to attract the best candidates.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Personalized Matches</h3>
-                <p>Receive job suggestions and candidate matches tailored to your profile and needs.</p>
+                <h3>Recruiters Find Talent</h3>
+                <p>Recruiters can register and post jobs to attract top talent efficiently.</p>
             </div>
         </section>
     </main>
@@ -199,6 +49,5 @@
     <footer>
         <p>©2025 HireMe. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
