@@ -4,54 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HireMe - Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional styling for contact page */
+        .contact-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-container input, 
+        .contact-container textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .contact-container button {
+            padding: 0.75rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .contact-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Header with Logo and Navigation -->
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="HireMe Logo">
+            <img src="logo.png" alt="HireMe Logo" style="height:60px;">
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <main>
-        <section class="hero">
-            <h1>Contact HireMe</h1>
-            <p>Have questions or want to get in touch? Fill out the form below!</p>
-        </section>
-
-        <!-- Contact Form -->
-        <section class="contact-form-section">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+           <form action="https://formspree.io/f/xovlovdy" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-        </section>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>©2025 HireMe. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
-
