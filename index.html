@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HireMe - Find Jobs</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireMe - Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header>
-    <div class="logo-container">
-        <img src="logo.png" alt="HireMe Logo">
-    </div>
-    <nav>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Hire me logo.png" alt="HireMe Logo">
+      </div>
+      <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to HireMe</h1>
+      <p>Your one-stop platform to connect job seekers with recruiters!</p>
+    </div>
+  </section>
 
-<main>
-    <section class="hero">
-        <h1>Welcome to HireMe</h1>
-        <p>Your one-stop platform to find the best jobs!</p>
-        <button onclick="location.href='jobs.html'">Explore Jobs</button>
-    </section>
+  <!-- Services Section -->
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h2>Candidate Registration</h2>
+        <p>Create your profile, upload your CV, and get discovered by top recruiters.</p>
+        <a href="candidate-register.html" class="btn">Register as Candidate</a>
+      </div>
+      <div class="feature">
+        <h2>Recruiter Registration</h2>
+        <p>Post job listings and find the right talent for your company quickly.</p>
+        <a href="recruiter-register.html" class="btn">Register as Recruiter</a>
+      </div>
+      <div class="feature">
+        <h2>Personalized Recommendations</h2>
+        <p>Get job matches tailored to your skills and preferences.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="features">
-        <div class="feature-item">
-            <h3>Easy Job Search</h3>
-            <p>Find jobs quickly and easily with our user-friendly interface.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Contact Employers</h3>
-            <p>Directly reach out to employers and increase your chances of getting hired.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Personalized Recommendations</h3>
-            <p>Get jobs that match your skills and preferences.</p>
-        </div>
-    </section>
-</main>
-
-<footer>
+  <!-- Footer -->
+  <footer>
     <p>©2025 HireMe. All rights reserved.</p>
-</footer>
-
+  </footer>
 </body>
 </html>
