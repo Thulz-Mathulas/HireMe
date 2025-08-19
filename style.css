@@ -21,8 +21,8 @@ header {
 }
 
 .logo-container img {
-    height: 150px;      /* Adjust the height */
-    width: auto;       /* Maintain aspect ratio */
+    height: 200px;      /* Adjust the height */
+    width: 200px;       /* Maintain aspect ratio */
     object-fit: contain; /* Keep logo fully visible */
 }
 
