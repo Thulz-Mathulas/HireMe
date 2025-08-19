@@ -1,131 +1,231 @@
-/* style.css - main styling for HireMe website */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header styling */
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #ddd;
-    background-color: #fff;
+  background: #0077cc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
 }
 
-.logo-container img {
-    height: 100px;      /* Bigger logo */
-    width: auto;        /* Keep aspect ratio */
-    object-fit: contain; 
+header img {
+  height: 70px; /* Enlarged logo */
+  width: auto;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
+header nav ul li {
+  display: inline;
 }
 
-nav ul li a:hover {
-    color: #007BFF; /* hover effect */
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* Responsive menu for smaller screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
+header nav ul li a:hover {
+  color: #ffcc00;
 }
 
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #007bff;
-}
-
+/* Hero Section (Home Page) */
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #0077cc, #00aaff);
+  color: white;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
 }
 
-.hero button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border: none;
-    background-color: #ffdd59;
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
+.hero .btn {
+  background: #ffcc00;
+  color: #333;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-.hero button:hover {
-    background-color: #ffc107;
+.hero .btn:hover {
+  background: #ffaa00;
 }
 
+/* Features Section (Home Page) */
 .features {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    text-align: center;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
 }
 
-.feature-item {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 300px;
-    transition: transform 0.3s ease;
+.feature {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.feature-item:hover {
-    transform: translateY(-5px);
+.feature h2 {
+  margin-bottom: 10px;
+  color: #0077cc;
 }
 
+/* About Page */
+.about {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+/* Contact Page */
+.contact {
+  padding: 50px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact button {
+  background: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #005fa3;
+}
+
+/* Jobs Page */
+.jobs {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.jobs h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077cc;
+}
+
+.job-listing {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.job-listing h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.job-listing p {
+  margin-bottom: 8px;
+}
+
+.job-listing .apply-btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: #333;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.job-listing .apply-btn:hover {
+  background: #ffaa00;
+}
+
+/* Footer */
 footer {
+  text-align: center;
+  padding: 20px;
+  background: #0077cc;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
     text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: #fff;
-    margin-top: 2rem;
+  }
+  
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
