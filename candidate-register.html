@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Registration - HireMe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Hire me logo.png" alt="HireMe Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Candidate Registration -->
+  <section class="form-section">
+    <div class="container">
+      <h2>Candidate Registration</h2>
+      <p>Fill in your details and upload your CV to start applying for jobs.</p>
+      <form action="#" method="post" enctype="multipart/form-data" class="form-box">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="skills">Key Skills</label>
+        <input type="text" id="skills" name="skills" placeholder="e.g. Java, Python, Project Management">
+
+        <label for="cv">Upload CV</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©2025 HireMe. All rights reserved.</p>
+  </footer>
+</body>
+</html>
