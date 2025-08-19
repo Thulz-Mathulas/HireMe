@@ -3,51 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HireMe - Home</title>
+    <title>HireMe - Find Jobs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="HireMe Logo" class="logo">
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="HireMe Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Welcome to HireMe</h1>
+        <p>Your one-stop platform to find and post jobs easily!</p>
+
+        <div class="register-login">
+            <select id="user-type">
+                <option value="">Register as...</option>
+                <option value="candidate">Candidate</option>
+                <option value="recruiter">Recruiter</option>
+            </select>
+            <button onclick="goToRegistration()">Go</button>
+            <button onclick="location.href='login.html'">Login</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Login</a>
-                    <div class="dropdown-content">
-                        <a href="login.html?type=candidate">Candidate Login</a>
-                        <a href="login.html?type=recruiter">Recruiter Login</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    </section>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to HireMe</h1>
-            <p>Your one-stop platform to connect candidates with recruiters!</p>
-        </section>
+    <section class="features">
+        <div class="feature-item">
+            <h3>Easy Job Search</h3>
+            <p>Find jobs that match your skills quickly with our intuitive platform.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Personalized Recommendations</h3>
+            <p>Receive suggestions tailored to your profile and interests.</p>
+        </div>
+    </section>
+</main>
 
-        <section class="features">
-            <div class="feature-item">
-                <h3>Register & Build Your Profile</h3>
-                <p>Candidates can register, upload their CV, and be discovered by recruiters.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Recruiters Find Talent</h3>
-                <p>Recruiters can register and post jobs to attract top talent efficiently.</p>
-            </div>
-        </section>
-    </main>
+<footer>
+    <p>©2025 HireMe. All rights reserved.</p>
+</footer>
 
-    <footer>
-        <p>©2025 HireMe. All rights reserved.</p>
-    </footer>
+<script>
+function goToRegistration() {
+    const type = document.getElementById('user-type').value;
+    if(type === 'candidate') {
+        location.href = 'register-candidate.html';
+    } else if(type === 'recruiter') {
+        location.href = 'register-recruiter.html';
+    } else {
+        alert('Please select a user type to register.');
+    }
+}
+</script>
+
 </body>
 </html>
