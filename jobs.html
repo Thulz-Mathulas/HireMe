@@ -3,64 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs - HireMe</title>
+    <title>Jobs Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
     <div class="logo-container">
-        <img src="logo.png" alt="HireMe Logo">
+        <img src="logo.png" alt="Logo">
     </div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="jobs.html" class="active">Jobs</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="register-dropdown">
+                <a href="#">Register</a>
+                <div class="register-dropdown-content">
+                    <a href="#candidate-form">Candidate</a>
+                    <a href="#recruiter-form">Recruiter</a>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Find Your Dream Job</h1>
-    <p>Search and explore the latest job opportunities.</p>
-    <div class="search-bar">
-        <input type="text" placeholder="Search jobs by title or company...">
-        <button>Search</button>
-    </div>
-</section>
+<main>
+    <section class="hero">
+        <h1>Jobs Portal</h1>
+        <p>Whether you are a candidate looking for jobs or a recruiter posting opportunities, this is the place.</p>
+    </section>
 
-<section class="job-listings">
-    <h2>Latest Jobs</h2>
+    <section class="job-portal">
 
-    <div class="job-card">
-        <h3>Frontend Developer</h3>
-        <p><strong>Company:</strong> Tech Innovators</p>
-        <p><strong>Location:</strong> Johannesburg, South Africa</p>
-        <p><strong>Type:</strong> Full-time</p>
-        <a href="#">Apply Now</a>
-    </div>
+        <!-- Candidate Form -->
+        <div class="job-form" id="candidate-form">
+            <h2>Candidate Registration & CV Upload</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <label>Upload CV:</label>
+                <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+                <input type="submit" value="Register & Upload CV">
+            </form>
+        </div>
 
-    <div class="job-card">
-        <h3>Backend Developer</h3>
-        <p><strong>Company:</strong> Code Solutions</p>
-        <p><strong>Location:</strong> Cape Town, South Africa</p>
-        <p><strong>Type:</strong> Contract</p>
-        <a href="#">Apply Now</a>
-    </div>
+        <!-- Recruiter Form -->
+        <div class="job-form" id="recruiter-form">
+            <h2>Recruiter Registration & Job Upload</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input type="text" name="company" placeholder="Company Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="job_title" placeholder="Job Title" required>
+                <textarea name="job_description" placeholder="Job Description" required></textarea>
+                <input type="submit" value="Register & Post Job">
+            </form>
+        </div>
 
-    <div class="job-card">
-        <h3>Digital Marketing Specialist</h3>
-        <p><strong>Company:</strong> Marketing Pros</p>
-        <p><strong>Location:</strong> Durban, South Africa</p>
-        <p><strong>Type:</strong> Part-time</p>
-        <a href="#">Apply Now</a>
-    </div>
-
-</section>
+    </section>
+</main>
 
 <footer>
-    ©2025 HireMe. All rights reserved.
+    <p>&copy; 2025 Jobs Portal. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
