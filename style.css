@@ -21,8 +21,11 @@ header {
 }
 
 .logo-container img {
-    max-height: 50px;
+    height: 80px;      /* Adjust the height */
+    width: auto;       /* Maintain aspect ratio */
+    object-fit: contain; /* Keep logo fully visible */
 }
+
 
 nav ul {
     list-style: none;
