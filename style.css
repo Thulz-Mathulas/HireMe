@@ -101,6 +101,23 @@ h1 {
 .job-card button:hover {
   background: #005bb5;
 }
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #007BFF;
+  color: #fff;
+  padding: 12px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
 
 /* Footer */
 footer {
