@@ -101,51 +101,64 @@ nav ul li a.active {
 }
 
 /* --- Job Listings --- */
-.job-listings {
+/* --- Jobs Portal Forms --- */
+.job-portal {
     max-width: 900px;
     margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     padding: 0 20px;
 }
 
-.job-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+.job-form {
     background: white;
-    transition: box-shadow 0.3s ease;
-}
-
-.job-card:hover {
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.job-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.job-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007BFF;
 }
 
-.job-card p {
-    margin-bottom: 5px;
-}
-
-.job-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
+.job-form input,
+.job-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.job-card a:hover {
-    background-color: #0056b3;
+.job-form textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
-/* --- Buttons --- */
-button, input[type="submit"] {
+.job-form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
+}
+
+.job-form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Responsive for Jobs Page */
+@media screen and (max-width: 768px) {
+    .job-portal {
+        padding: 0 10px;
+    }
+}
+
 }
 
 /* --- Contact Form --- */
