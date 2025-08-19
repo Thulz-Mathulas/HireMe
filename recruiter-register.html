@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter Registration - HireMe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Hire me logo.png" alt="HireMe Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Recruiter Registration -->
+  <section class="form-section">
+    <div class="container">
+      <h2>Recruiter Registration</h2>
+      <p>Create your recruiter profile and start posting jobs.</p>
+      <form action="#" method="post" enctype="multipart/form-data" class="form-box">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="email">Business Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="jobtitle">Job Title</label>
+        <input type="text" id="jobtitle" name="jobtitle" placeholder="e.g. Software Developer" required>
+
+        <label for="jobdesc">Job Description</label>
+        <textarea id="jobdesc" name="jobdesc" rows="5" required></textarea>
+
+        <label for="requirements">Job Requirements</label>
+        <textarea id="requirements" name="requirements" rows="4" placeholder="e.g. 2+ years experience, Java skills"></textarea>
+
+        <button type="submit" class="btn">Register & Post Job</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©2025 HireMe. All rights reserved.</p>
+  </footer>
+</body>
+</html>
