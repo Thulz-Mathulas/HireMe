@@ -1,250 +1,165 @@
-/* --- General Reset --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* --- Header --- */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 50px;
     background-color: #fff;
-    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo-container img {
-    height: 50px;
+    height: 50px; /* adjust logo size */
     width: auto;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
     gap: 20px;
+    align-items: center;
 }
 
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 8px 12px;
-    transition: background 0.3s, color 0.3s;
-}
-
-header nav ul li a:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-}
-
-/* Dropdown Styling */
-.dropdown {
+nav ul li {
     position: relative;
 }
 
+nav ul li a {
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Dropdown */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    top: 35px;
+    left: 0;
     min-width: 120px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 4px;
     overflow: hidden;
-    top: 35px;
     z-index: 1000;
 }
 
 .dropdown-content a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px;
     color: #333;
-}
-
-.dropdown-content a:hover {
-    background-color: #007bff;
-    color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Buttons */
-.button-primary {
-    padding: 10px 20px;
-    background-color: #007bff;
+/* Hero section */
+.hero {
+    background: url('board.jpg') no-repeat center center/cover;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.button-primary {
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 .button-primary:hover {
     background-color: #0056b3;
 }
 
-.button-secondary {
-    padding: 8px 16px;
-    border: 1px solid #007bff;
-    color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button-secondary:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/* --- Hero Section --- */
-.hero {
-    background-image: url('images/board.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* --- Features Section --- */
+/* Features section */
 .features {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 20px;
+    align-items: flex-start;
+    padding: 60px 20px;
     gap: 20px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 .feature-item {
-    flex-basis: 30%;
-    padding: 25px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     background-color: #fff;
+    padding: 20px;
+    flex: 1 1 250px; /* responsive size */
+    max-width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-.feature-item img.feature-icon {
-    height: 40px;
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
     margin-bottom: 15px;
 }
 
-/* --- Forms (for Jobs & Login pages) --- */
-form {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-/* --- Tables (for Jobs list) --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
-}
-
-table th, table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-table th {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/* --- Footer --- */
+/* Footer */
 footer {
+    text-align: center;
+    padding: 20px;
     background-color: #222;
     color: #fff;
-    text-align: center;
-    padding: 15px;
-    margin-top: 50px;
 }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .features {
         flex-direction: column;
         align-items: center;
     }
 
-    .feature-item {
-        flex-basis: 80%;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .hero-content h1 {
+    .hero h1 {
         font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
     }
 }
