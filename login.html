@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HireMe - Login</title>
+    <title>Login - Your Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login">
 
 <header>
     <div class="logo-container">
-        <img src="images/logo.png" alt="HireMe Logo">
+        <img src="logo.png" alt="Logo">
     </div>
     <nav>
         <ul>
@@ -18,39 +18,21 @@
             <li><a href="jobs.html">Jobs</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li class="dropdown">
-                <a href="#">Register ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="register-jobseeker.html">Job Seeker</a></li>
-                    <li><a href="register-employer.html">Employer</a></li>
-                </ul>
-            </li>
-            <li><a href="login.html" class="button-secondary">Login</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <section class="page-banner">
-        <h1>Login</h1>
-        <p>Access your account to manage applications or post jobs.</p>
-    </section>
-
-    <section class="login-form">
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Your Email">
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="Your Password">
-
-            <button type="submit" class="button-primary">Login</button>
-        </form>
-    </section>
-</main>
+<section class="login-form">
+    <h2>Login</h2>
+    <form action="#" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="button-primary">Login</button>
+    </form>
+</section>
 
 <footer>
-    <p>©2025 HireMe. All rights reserved.</p>
+    &copy; 2025 Your Company. All rights reserved.
 </footer>
 
 </body>
