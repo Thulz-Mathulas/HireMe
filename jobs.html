@@ -10,7 +10,7 @@
 
 <header>
     <div class="logo-container">
-        <img src="logo.png" alt="HireMe Logo">
+        <img src="images/logo.png" alt="HireMe Logo">
     </div>
     <nav>
         <ul>
@@ -18,19 +18,39 @@
             <li><a href="jobs.html">Jobs</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="#">Register ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="register-jobseeker.html">Job Seeker</a></li>
+                    <li><a href="register-employer.html">Employer</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html" class="button-secondary">Login</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section class="jobs-list">
+    <section class="page-banner">
+        <h1>Find Your Dream Job</h1>
+        <p>Browse through thousands of job listings tailored to your skills.</p>
+    </section>
+
+    <section class="job-listings">
         <div class="job-item">
             <h3>Frontend Developer</h3>
-            <p>Location: Cape Town | Experience: 2+ years</p>
+            <p>Company: TechCorp | Location: Remote | Type: Full-time</p>
+            <a href="#" class="button-primary">Apply Now</a>
         </div>
         <div class="job-item">
-            <h3>Backend Developer</h3>
-            <p>Location: Johannesburg | Experience: 3+ years</p>
+            <h3>Digital Marketing Specialist</h3>
+            <p>Company: MarketGuru | Location: Johannesburg | Type: Part-time</p>
+            <a href="#" class="button-primary">Apply Now</a>
+        </div>
+        <div class="job-item">
+            <h3>Data Analyst</h3>
+            <p>Company: DataSmart | Location: Cape Town | Type: Full-time</p>
+            <a href="#" class="button-primary">Apply Now</a>
         </div>
     </section>
 </main>
