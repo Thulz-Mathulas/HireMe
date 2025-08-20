@@ -1,18 +1,11 @@
-/* General Styles */
-* {
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
     background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,13 +19,15 @@ header {
 }
 
 header .logo-container img {
-    max-height: 70px; /* Increased logo size */
+    max-height: 70px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -46,80 +41,34 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-/* Default Hero Section */
+/* Hero section */
 .hero {
     text-align: center;
-    padding: 80px 20px;
-    background: #f0f4ff; /* fallback color for other pages */
-    color: #333;
-    position: relative;
+    padding: 5rem 2rem;
+    background-color: #e6f2ff;
 }
 
-/* Home Page Hero */
+/* Default hero style (other pages if they have hero) */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f0f4ff; /* fallback color for jobs/about/contact */
+  color: #333;
+}
+
+/* Only for HOME page */
 .home .hero {
-    color: white;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    position: relative;
+  color: white;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  position: relative;
 }
 
 .home .hero h1,
 .home .hero p {
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
 
-/* Optional overlay for readability */
-.home .hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: 1;
-}
-
-.home .hero h1,
-.home .hero p,
-.home .hero .register-login {
-    position: relative;
-    z-index: 2;
-}
-
-/* Register/Login Section */
-.register-login {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.register-login select,
-.register-login button {
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.register-login select {
-    background: white;
-    color: #333;
-}
-
-.register-login button {
-    background: #ffdd57;
-    color: #333;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.register-login button:hover {
-    background: #ffc107;
-}
-
-/* Features Section */
+/* Features section */
 .features {
     display: flex;
     justify-content: center;
@@ -147,7 +96,7 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-/* Jobs Page */
+/* Jobs page */
 .jobs-list {
     display: flex;
     flex-direction: column;
@@ -162,7 +111,7 @@ nav ul li a:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-/* Contact Page */
+/* Contact page */
 .contact-form-container {
     max-width: 600px;
     margin: 2rem auto;
@@ -207,17 +156,16 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive Design */
+/* Responsive design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 0.8rem;
-        align-items: center;
-    }
-
     .features {
         flex-direction: column;
         padding: 2rem 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
     }
 
     .hero h1 {
@@ -230,10 +178,5 @@ footer {
 
     header .logo-container img {
         max-height: 50px;
-    }
-
-    .register-login {
-        flex-direction: column;
-        gap: 10px;
     }
 }
