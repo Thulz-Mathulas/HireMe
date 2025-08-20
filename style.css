@@ -1,24 +1,15 @@
-/* --- General Styles --- */
-body {
+/* --- General Reset --- */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-input, textarea, button {
-    font-family: inherit;
+    color: #333;
 }
 
 /* --- Header --- */
@@ -41,62 +32,63 @@ header {
 
 header nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-header nav ul li {
-    position: relative;
-}
-
 header nav ul li a {
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover {
-    background-color: #f0f0f0;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    list-style: none;
-    padding: 10px 0;
-    min-width: 150px;
-    z-index: 200;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    top: 35px;
+    z-index: 1000;
 }
 
-.dropdown-menu li a {
+.dropdown-content a {
     display: block;
-    padding: 8px 15px;
-    white-space: nowrap;
+    padding: 10px 15px;
+    color: #333;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* --- Buttons --- */
-.button-primary {
-    background-color: #007BFF;
+.dropdown-content a:hover {
+    background-color: #007bff;
     color: #fff;
-    padding: 12px 25px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Buttons */
+.button-primary {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    border: none;
-    cursor: pointer;
 }
 
 .button-primary:hover {
@@ -104,36 +96,38 @@ header nav ul li a:hover {
 }
 
 .button-secondary {
-    background-color: transparent;
-    border: 2px solid #007BFF;
-    color: #007BFF;
-    padding: 8px 20px;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
-    cursor: pointer;
 }
 
 .button-secondary:hover {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: #fff;
 }
 
-/* --- Hero / Page Banner --- */
-.hero, .page-banner {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('images/hero-bg.jpg') center/cover no-repeat;
+/* --- Hero Section --- */
+.hero {
+    background-image: url('images/board.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    padding: 120px 20px;
     text-align: center;
+    padding: 0 20px;
 }
 
-.hero h1, .page-banner h1 {
+.hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.hero p, .page-banner p {
+.hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
@@ -142,10 +136,10 @@ header nav ul li a:hover {
 .features {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 50px 20px;
     gap: 20px;
     text-align: center;
-    flex-wrap: wrap;
 }
 
 .feature-item {
@@ -155,53 +149,61 @@ header nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     background-color: #fff;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .feature-item img.feature-icon {
     height: 40px;
     margin-bottom: 15px;
-    transition: transform 0.3s;
 }
 
-.feature-item img.feature-icon:hover {
-    transform: scale(1.2);
-}
-
-/* --- Job Listings / Forms --- */
-.job-listings, .contact-form, .login-form, .about-content {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.job-item, .contact-form form, .login-form form {
-    background: #fff;
-    padding: 25px;
+/* --- Forms (for Jobs & Login pages) --- */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
     border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.job-item h3 {
-    margin-top: 0;
-}
-
-.contact-form input, .contact-form textarea, .login-form input {
+form input, form select, form textarea {
     width: 100%;
     padding: 10px;
-    margin: 8px 0 15px 0;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.contact-form button, .login-form button {
+form button {
     width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Tables (for Jobs list) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
 }
 
 /* --- Footer --- */
@@ -209,22 +211,23 @@ footer {
     background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 20px 10px;
-    margin-top: 40px;
+    padding: 15px;
+    margin-top: 50px;
 }
 
-/* --- Responsive Design --- */
-@media (max-width: 1024px) {
+/* --- Responsive --- */
+@media (max-width: 900px) {
     .features {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
+
     .feature-item {
-        flex-basis: 45%;
+        flex-basis: 80%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -234,35 +237,14 @@ footer {
     header nav ul {
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
 
-    .hero h1, .page-banner h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p, .page-banner p {
-        font-size: 1rem;
-    }
-
-    .feature-item {
-        flex-basis: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1, .page-banner h1 {
+    .hero-content h1 {
         font-size: 2rem;
     }
 
-    .hero p, .page-banner p {
-        font-size: 0.9rem;
-    }
-
-    header nav ul li a {
-        padding: 6px 10px;
-    }
-
-    .button-primary, .button-secondary {
-        padding: 10px 18px;
+    .hero-content p {
+        font-size: 1rem;
     }
 }
