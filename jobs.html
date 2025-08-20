@@ -1,67 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HireMe - Jobs</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="HireMe Logo" class="logo">
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="HireMe Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="jobs-list">
+        <div class="job-item">
+            <h3>Frontend Developer</h3>
+            <p><strong>Company:</strong> TechCorp</p>
+            <p><strong>Location:</strong> Johannesburg</p>
+            <p>Develop user-friendly web interfaces and collaborate with the design team.</p>
+            <button>Apply Now</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="job-item">
+            <h3>Digital Marketing Specialist</h3>
+            <p><strong>Company:</strong> MarketPlus</p>
+            <p><strong>Location:</strong> Cape Town</p>
+            <p>Plan and execute online campaigns to grow brand awareness and engagement.</p>
+            <button>Apply Now</button>
+        </div>
+        <div class="job-item">
+            <h3>Backend Developer</h3>
+            <p><strong>Company:</strong> DataWorks</p>
+            <p><strong>Location:</strong> Durban</p>
+            <p>Design and maintain APIs and server-side application logic.</p>
+            <button>Apply Now</button>
+        </div>
+        <!-- Add more jobs as needed -->
+    </section>
+</main>
 
-    <main>
-        <section class="jobs-section">
-            <h1>Jobs</h1>
-            <p>Select your role to see the relevant form:</p>
+<footer>
+    <p>©2025 HireMe. All rights reserved.</p>
+</footer>
 
-            <div class="job-options">
-                <button onclick="showForm('candidate')">Candidate</button>
-                <button onclick="showForm('recruiter')">Recruiter</button>
-            </div>
-
-            <div id="candidate-form" class="form-container" style="display:none;">
-                <h2>Candidate Application</h2>
-                <form action="https://formspree.io/f/xovlovdy" method="POST">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="file" name="cv" required>
-                    <button type="submit">Submit CV</button>
-                </form>
-            </div>
-
-            <div id="recruiter-form" class="form-container" style="display:none;">
-                <h2>Post a Job</h2>
-                <form action="https://formspree.io/f/xovlovdy" method="POST">
-                    <input type="text" name="company" placeholder="Company Name" required>
-                    <input type="text" name="jobtitle" placeholder="Job Title" required>
-                    <textarea name="description" placeholder="Job Description" required></textarea>
-                    <button type="submit">Post Job</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>©2025 HireMe. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function showForm(type) {
-            document.getElementById('candidate-form').style.display = type === 'candidate' ? 'block' : 'none';
-            document.getElementById('recruiter-form').style.display = type === 'recruiter' ? 'block' : 'none';
-        }
-    </script>
 </body>
-</html>
