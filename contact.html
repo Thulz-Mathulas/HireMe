@@ -10,7 +10,7 @@
 
 <header>
     <div class="logo-container">
-        <img src="logo.png" alt="HireMe Logo">
+        <img src="images/logo.png" alt="HireMe Logo">
     </div>
     <nav>
         <ul>
@@ -18,18 +18,36 @@
             <li><a href="jobs.html">Jobs</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="#">Register ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="register-jobseeker.html">Job Seeker</a></li>
+                    <li><a href="register-employer.html">Employer</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html" class="button-secondary">Login</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section class="contact-form-container">
+    <section class="page-banner">
         <h1>Contact Us</h1>
+        <p>Have questions? Get in touch with our team.</p>
+    </section>
+
+    <section class="contact-form">
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message"></textarea>
+
+            <button type="submit" class="button-primary">Send Message</button>
         </form>
     </section>
 </main>
