@@ -34,8 +34,8 @@ header {
     z-index: 100;
 }
 
-header .logo-container img {
-    height: 50px;
+header .logo-container png {
+    height: 30px;
 }
 
 nav ul {
