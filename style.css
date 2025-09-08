@@ -35,7 +35,7 @@ header {
     z-index: 100;
 }
 
-/* ✅ Corrected logo styling */
+
 header .logo-container img {
     height: 60px;   /* change this value to resize */
     width: auto;    /* keeps proportions */
