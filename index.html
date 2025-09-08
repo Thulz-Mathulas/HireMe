@@ -130,37 +130,83 @@
       cursor: pointer;
       color: #2c3e50;
     }
-/* ======= Hero Section ======= */
-.hero {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-    url('https://raw.githubusercontent.com/Thulz-Mathulas/HireMe/main/board.jpg') 
-    no-repeat center center/cover;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
+    
+    /* ======= Hero Section ======= */
+    .hero {
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        url('https://raw.githubusercontent.com/Thulz-Mathulas/HireMe/main/board.jpg') 
+        no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
 
-.hero-content {
-  max-width: 800px;
-  padding: 0 20px;
-}
+    .hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+    }
 
-.hero-content h1 {
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
 
-.hero-content p {
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
+    .hero-content p {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    /* ======= Middle Image Section ======= */
+    .middle-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      gap: 40px;
+    }
+    
+    .middle-content {
+      flex: 1;
+    }
+    
+    .middle-content h2 {
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    
+    .middle-content p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    
+    .middle-image {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .middle-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .middle-image:hover img {
+      transform: scale(1.03);
+    }
 
     /* ======= Buttons ======= */
     .btn {
@@ -184,12 +230,13 @@
 
     .btn-secondary {
       background: transparent;
-      border: 2px solid #fff;
+      border: 2px solid #007bff;
+      color: #007bff;
       margin-left: 15px;
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 123, 255, 0.1);
     }
 
     /* ======= Feature Boxes ======= */
@@ -326,6 +373,15 @@
       .hero-content p {
         font-size: 1.2rem;
       }
+      
+      .middle-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .middle-content h2 {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 768px) {
@@ -410,6 +466,10 @@
       .btn-secondary {
         margin-left: 0;
       }
+      
+      .middle-content h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -418,12 +478,11 @@
   <!-- ======= Header ======= -->
   <header>
     <div class="logo-container">
-  <a href="index.html">
-    <img src="https://raw.githubusercontent.com/Thulz-Mathulas/HireMe/main/logo.png" 
-         alt="Your HireMe Logo" class="logo">
-  </a>
-</div>
-
+      <a href="index.html">
+        <img src="https://raw.githubusercontent.com/Thulz-Mathulas/HireMe/main/logo.png" 
+             alt="Your HireMe Logo" class="logo">
+      </a>
+    </div>
     
     <button class="mobile-menu-btn">
       <i class="fas fa-bars"></i>
@@ -452,6 +511,20 @@
       <p>Welcome to HireMe, your trusted platform for connecting talent with opportunity. We are dedicated to providing a seamless experience for job seekers, employers, and professionals looking to grow their careers. 
         Whether you’re searching for your next big opportunity, seeking the perfect candidate, or exploring new career paths, our platform offers intuitive tools, up-to-date listings,
         and reliable resources to guide you every step of the way.</p>
+    </div>
+  </section>
+
+  <!-- ======= Middle Image Section ======= -->
+  <section class="middle-section">
+    <div class="middle-content">
+      <h2>Connecting Talent with Opportunity</h2>
+      <p>At HireMe, we believe that the right connection can transform careers and businesses. Our platform is designed to make the job search and hiring process efficient, effective, and enjoyable for everyone involved.</p>
+      <p>With thousands of job opportunities and talented professionals, we're building the future of recruitment—one connection at a time.</p>
+      <a href="jobs.html" class="btn">Explore Jobs</a>
+      <a href="register-employer.html" class="btn btn-secondary">Post a Job</a>
+    </div>
+    <div class="middle-image">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Team collaboration at workplace">
     </div>
   </section>
 
@@ -498,7 +571,7 @@
         <h3>Contact Us</h3>
         <p><i class="fas fa-map-marker-alt"></i> 6 Shale Street, Claremont. 2092</p>
         <p><i class="fas fa-phone"></i> +27 (011) 123-4567</p>
-        <p><i class="fas fa-envelope"></i> info@yourhireme.com</p>
+        <p><i class="fas fa-envelope"></i> info@hireme.com</p>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
