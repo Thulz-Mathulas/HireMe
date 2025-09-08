@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Your HireMe</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* ======= General Styles ======= */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #f5f5f5;
+      background-color: #f8f9fa;
+      color: #333;
     }
 
     a {
@@ -26,27 +27,44 @@
       margin: 0;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     /* ======= Header ======= */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 12px 5%;
       background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 100;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .logo logo.png {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 48px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo png {
+      height: 100%;
+      width: auto;
     }
 
     nav ul {
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
 
     nav ul li {
@@ -55,8 +73,16 @@
 
     nav ul li a {
       display: block;
-      padding: 8px 12px;
-      color: #333;
+      padding: 10px 15px;
+      color: #2c3e50;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #f0f7ff;
+      color: #007bff;
     }
 
     /* Dropdown Menu */
@@ -66,25 +92,49 @@
       top: 100%;
       left: 0;
       background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      min-width: 150px;
-      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      min-width: 180px;
+      border-radius: 8px;
       z-index: 1000;
+      overflow: hidden;
+      padding: 10px 0;
     }
 
     nav ul li .dropdown-menu li a {
-      padding: 10px;
-      color: #333;
+      padding: 12px 20px;
+      color: #444;
+      transition: all 0.2s;
+    }
+
+    nav ul li .dropdown-menu li a:hover {
+      background-color: #eaf4ff;
+      color: #007bff;
+      padding-left: 25px;
     }
 
     nav ul li:hover .dropdown-menu {
       display: block;
     }
 
+    .dropdown > a::after {
+      content: " ▾";
+      font-size: 0.9em;
+    }
+
+    /* Mobile menu button */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #2c3e50;
+    }
+
     /* ======= Hero Section ======= */
     .hero {
-      background: url('board.jpg') no-repeat center center/cover;
-      height: 400px;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,87 +143,270 @@
       position: relative;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.4);
-    }
-
     .hero-content {
-      position: relative;
-      z-index: 1;
+      max-width: 800px;
+      padding: 0 20px;
     }
 
     .hero-content h1 {
-      font-size: 48px;
+      font-size: 3.2rem;
       margin-bottom: 20px;
+      font-weight: 700;
     }
 
     .hero-content p {
-      font-size: 20px;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    /* ======= Buttons ======= */
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    }
+
+    .btn:hover {
+      background: #0069d9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #fff;
+      margin-left: 15px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
     }
 
     /* ======= Feature Boxes ======= */
     .features {
       display: flex;
       justify-content: space-around;
-      margin: 40px 20px;
+      margin: 60px auto;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 30px;
+      max-width: 1200px;
+      padding: 0 20px;
     }
 
     .feature-box {
       background: #fff;
-      flex: 1 1 250px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      flex: 1 1 300px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-radius: 10px;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-box i {
+      font-size: 48px;
+      color: #007bff;
+      margin-bottom: 20px;
     }
 
     .feature-box h3 {
       margin-bottom: 15px;
-      color: #007bff;
+      color: #2c3e50;
+      font-size: 1.5rem;
     }
 
     .feature-box p {
-      color: #555;
+      color: #666;
+      line-height: 1.6;
     }
 
-    /* ======= Buttons ======= */
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
+    /* ======= Footer ======= */
+    footer {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 50px 0 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+
+    .footer-section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
       background: #007bff;
-      color: #fff;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-top: 10px;
     }
 
-    .btn:hover {
-      background: #0056b3;
+    .footer-section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #bdc3c7;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: #007bff;
+      padding-left: 5px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #ecf0f1;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 30px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     /* ======= Responsive ======= */
+    @media (max-width: 992px) {
+      .hero-content h1 {
+        font-size: 2.8rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+    }
+
     @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
+      header {
+        padding: 10px 4%;
       }
+      
       nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
         flex-direction: column;
-        gap: 0;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       }
+      
+      nav ul.active {
+        display: flex;
+      }
+      
       nav ul li {
         width: 100%;
       }
+      
+      nav ul li a {
+        padding: 15px;
+      }
+      
       nav ul li .dropdown-menu {
         position: relative;
+        box-shadow: none;
+        width: 100%;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero {
+        height: 400px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      
+      .btn {
+        padding: 12px 25px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .logo {
+        height: 40px;
+      }
+      
+      .hero {
+        height: 350px;
+      }
+      
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+      
+      .feature-box {
+        flex: 1 1 100%;
+      }
+      
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .btn-secondary {
+        margin-left: 0;
       }
     }
   </style>
@@ -182,14 +415,22 @@
 
   <!-- ======= Header ======= -->
   <header>
-    <div class="logo">
-      <a href="index.html">YourLogo</a>
+    <div class="logo-container">
+      <div class="logo">
+        <!-- Replace with your actual logo image -->
+        <img src="logo.png" alt="Your HireMe Logo">
+      </div>
     </div>
+    
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+    
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="dropdown">
-          <a href="javascript:void(0)">Register ▼</a>
+          <a href="javascript:void(0)">Register</a>
           <ul class="dropdown-menu">
             <li><a href="register-employer.html">Employer</a></li>
             <li><a href="register-jobseeker.html">Job Seeker</a></li>
@@ -206,25 +447,76 @@
     <div class="hero-content">
       <h1>Welcome to Your Job Portal</h1>
       <p>Connecting employers and job seekers seamlessly</p>
-      <a href="jobs.html" class="btn">View Jobs</a>
+      <div class="btn-container">
+        <a href="jobs.html" class="btn">View Jobs</a>
+        <a href="register.html" class="btn btn-secondary">Create Account</a>
+      </div>
     </div>
   </section>
 
   <!-- ======= Feature Boxes ======= -->
   <section class="features">
     <div class="feature-box">
+      <i class="fas fa-briefcase"></i>
       <h3>Post Jobs Easily</h3>
       <p>Employers can post job openings and reach thousands of job seekers instantly.</p>
     </div>
     <div class="feature-box">
+      <i class="fas fa-search"></i>
       <h3>Find Jobs Quickly</h3>
       <p>Job seekers can search and apply for jobs that match their skills and location.</p>
     </div>
     <div class="feature-box">
+      <i class="fas fa-shield-alt"></i>
       <h3>Secure Platform</h3>
       <p>All data is protected, and our platform ensures a safe environment for all users.</p>
     </div>
   </section>
 
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Your HireMe is a leading job portal connecting talented professionals with top employers worldwide.</p>
+        <p>We're committed to making the hiring process simple and efficient for both employers and job seekers.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Browse Jobs</a></li>
+          <li><a href="register-employer.html">Employer Registration</a></li>
+          <li><a href="register-jobseeker.html">Job Seeker Registration</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> info@yourhireme.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Your HireMe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
