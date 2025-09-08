@@ -22,6 +22,7 @@ ul {
 }
 
 /* Header */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -34,8 +35,10 @@ header {
     z-index: 100;
 }
 
+/* ✅ Corrected logo styling */
 header .logo-container img {
-    height: 45px;
+    height: 60px;   /* change this value to resize */
+    width: auto;    /* keeps proportions */
 }
 
 nav ul {
@@ -66,6 +69,8 @@ nav ul li a:hover {
     background-color: #007BFF;
     color: #fff;
 }
+
+
 
 /* Dropdown */
 .dropdown {
